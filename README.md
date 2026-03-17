@@ -166,18 +166,18 @@ The model then predicts the **expected salary**.
 
 ## Project Structure
 AI-Job-Salary-Prediction
+├── dataset
+│ └── job_market_data.csv
 │
 ├── notebooks
-│ └── analysis.ipynb
+│ └── EDA.ipynb
+│ └── Model_Traning.ipynb
 │
 ├── model
 │ └── salary_prediction_model.pkl
 │
 ├── app
 │ └── app.py
-│
-├── dataset
-│ └── job_market_data.csv
 │
 ├── requirements.txt
 └── README.md
