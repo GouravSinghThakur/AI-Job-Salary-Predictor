@@ -1,0 +1,96 @@
+import streamlit as st
+import pandas as pd
+import joblib
+
+# Load trained model
+model = joblib.load("salary_prediction_model.pkl")
+
+st.title("AI & Data Science Salary Predictor")
+
+st.write("Predict salary based on skills, experience and job attributes")
+
+# ---- USER INPUT ----
+
+job_title = st.selectbox("Job Title",
+["Data Scientist","ML Engineer","Data Analyst","AI Researcher"])
+
+company_size = st.selectbox("Company Size",
+["Small","Medium","Large"])
+
+company_industry = st.selectbox("Industry",
+["Tech","Finance","Healthcare","Retail"])
+
+country = st.selectbox("Country",
+["USA","India","UK","Germany"])
+
+remote_type = st.selectbox("Work Mode",
+["Remote","Hybrid","Onsite"])
+
+experience_level = st.selectbox("Experience Level",
+["Entry","Mid","Senior"])
+
+education_level = st.selectbox("Education",
+["Bachelor","Master","PhD"])
+
+hiring_urgency = st.selectbox("Hiring Urgency",
+["Low","Medium","High"])
+
+years_experience = st.slider("Years of Experience",0,15,2)
+
+job_openings = st.slider("Number of Job Openings",1,20,5)
+
+job_posting_month = st.slider("Posting Month",1,12,6)
+
+job_posting_year = st.selectbox("Posting Year",
+[2020,2021,2022,2023,2024,2025,2026])
+
+# ---- SKILLS ----
+
+skills_python = st.checkbox("Python")
+
+skills_sql = st.checkbox("SQL")
+
+skills_ml = st.checkbox("Machine Learning")
+
+skills_deep_learning = st.checkbox("Deep Learning")
+
+skills_cloud = st.checkbox("Cloud")
+
+total_skills = sum([
+skills_python,
+skills_sql,
+skills_ml,
+skills_deep_learning,
+skills_cloud
+])
+
+# ---- CREATE INPUT DATAFRAME ----
+
+input_data = pd.DataFrame({
+'job_title':[job_title],
+'company_size':[company_size],
+'company_industry':[company_industry],
+'country':[country],
+'remote_type':[remote_type],
+'experience_level':[experience_level],
+'years_experience':[years_experience],
+'education_level':[education_level],
+'skills_python':[int(skills_python)],
+'skills_sql':[int(skills_sql)],
+'skills_ml':[int(skills_ml)],
+'skills_deep_learning':[int(skills_deep_learning)],
+'skills_cloud':[int(skills_cloud)],
+'job_posting_month':[job_posting_month],
+'job_posting_year':[job_posting_year],
+'hiring_urgency':[hiring_urgency],
+'job_openings':[job_openings],
+'total_skills':[total_skills]
+})
+
+# ---- PREDICT BUTTON ----
+
+if st.button("Predict Salary"):
+
+    prediction = model.predict(input_data)
+
+    st.success(f"Predicted Salary: ${int(prediction[0]):,}")
