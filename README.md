@@ -1,9 +1,17 @@
 # AI Job Market Salary Prediction & Analytics
 
+![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-EC4E20?style=for-the-badge)
+![LightGBM](https://img.shields.io/badge/LightGBM-02569B?style=for-the-badge)
+![Matplotlib](https://img.shields.io/badge/matplotlib-11557c?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/seaborn-5A9BD5?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Joblib](https://img.shields.io/badge/joblib-FFD43B?style=for-the-badge)
+
 An end-to-end **Data Science project** that analyzes the **AI & Data Science job market (2020–2026)** and builds a machine learning system to **predict salaries based on skills, experience, and job attributes**.
-
-This project combines **data analysis, machine learning modeling, and an interactive web application** to generate insights about the AI talent market.
-
 ---
 
 ## Project Overview
