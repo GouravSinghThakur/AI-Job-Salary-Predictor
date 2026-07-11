@@ -1,4 +1,4 @@
-# AI Job Market Salary Prediction & Analytics
+[# AI Job Market Salary Prediction & Analytics](https://ai-job-salary-predictor-guwlhssjawqfwwgvmjzsxa.streamlit.app/)
 
 ![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
