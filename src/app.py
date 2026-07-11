@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import os
 
-model_path = os.path.join(os.path.dirname(__file__), "..", "models", "salary_prediction_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "..", "model", "salary_prediction_model.pkl")
 model = joblib.load(model_path)
 
 currency_map = {
